@@ -19,7 +19,11 @@
   (is (= "hello world" (url-unquote "hello%20world"))))
 
 (deftest querystring-as-seq-test
-  (is (= '(("fruit" "apple") ("pet" "goldfish") ("drink" "cold beer") ("drink" "water") ("phrase" "Hello World"))
+  (is (= '(("fruit" "apple")
+           ("pet" "goldfish")
+           ("drink" "cold beer")
+           ("drink" "water")
+           ("phrase" "Hello World"))
          (querystring-as-seq qs))))
 
 (deftest querystring-as-multimap-test
